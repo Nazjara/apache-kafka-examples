@@ -25,7 +25,7 @@ public class WikimediaChangesProducer {
         properties.setProperty(ProducerConfig.LINGER_MS_CONFIG, "20");
         properties.setProperty(ProducerConfig.BATCH_SIZE_CONFIG, Integer.toString(32 * 1024));
 
-        var topic = "wikimedia.recentchange";
+        var topic = "wikimedia";
         var eventHandler = new WikimediaChangeHandler();
         var url = "https://stream.wikimedia.org/v2/stream/recentchange";
 
